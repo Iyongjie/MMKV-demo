@@ -60,6 +60,8 @@
 		B7A2DBA2215C7AB300323011 /* MMKV_demoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMKV_demoUITests.m; sourceTree = "<group>"; };
 		B7A2DBA4215C7AB300323011 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7A2DBB1215C7E1500323011 /* doutula1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = doutula1.jpg; sourceTree = "<group>"; };
+		B7A2DBB3215CB27100323011 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		B7A2DBB4215CB29100323011 /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
 		BE76E1934F57B6C534157B66 /* Pods-MMKV-demoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMKV-demoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MMKV-demoUITests/Pods-MMKV-demoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CFE2B3A8F8AA1E6933B50D46 /* Pods-MMKV-demoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMKV-demoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MMKV-demoUITests/Pods-MMKV-demoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E22BE910703A1CBED6162159 /* libPods-MMKV-demoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MMKV-demoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +136,8 @@
 				B7A2DB7F215C7AB100323011 /* AppDelegate.m */,
 				B7A2DB81215C7AB100323011 /* ViewController.h */,
 				B7A2DB82215C7AB100323011 /* ViewController.m */,
+				B7A2DBB3215CB27100323011 /* PrefixHeader.pch */,
+				B7A2DBB4215CB29100323011 /* Macro.h */,
 				B7A2DB84215C7AB100323011 /* Main.storyboard */,
 				B7A2DB87215C7AB200323011 /* Assets.xcassets */,
 				B7A2DB89215C7AB200323011 /* LaunchScreen.storyboard */,
@@ -539,6 +543,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = "$(PROJECT)/PrefixHeader.pch";
 				INFOPLIST_FILE = "MMKV-demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -557,6 +562,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = "$(PROJECT)/PrefixHeader.pch";
 				INFOPLIST_FILE = "MMKV-demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (

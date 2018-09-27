@@ -7,20 +7,7 @@
 //
 
 #import "ViewController.h"
-#import <MMKV.h>
 
-#define MMKVDefault                         [MMKV defaultMMKV]
-
-#define MMKVSetBool(value,key)              [MMKVDefault setBool:value forKey:key]
-#define MMKVSetObject(object,key)           [MMKVDefault setObject:object forKey:key]
-
-#define MMKVGetBool(key)                    [MMKVDefault getBoolForKey:key]
-#define MMKVGetObject(type,key)             [MMKVDefault getObjectOfClass:type.class forKey:key]
-
-#define MMKVRemoveKeys(keys)                [MMKVDefault removeValuesForKeys:keys]
-#define MMKVRemoveKey(key)                  [MMKVDefault removeValueForKey:key]
-#define MMKVClearAll                        [MMKVDefault clearAll]
-#define MMKVClearMemoryCache                [MMKVDefault clearMemoryCache]
 
 @interface ViewController ()
 @property (nonatomic,strong)UIImageView *imageView;
@@ -65,10 +52,11 @@
     NSData *tmpData2 = MMKVGetObject(NSData, @"data2");
     NSArray *arr2 = [NSKeyedUnarchiver unarchiveObjectWithData:tmpData2];
     NSLog(@"%@",arr2);
-    NSUserDefaults
     
 #pragma mark 存取数值
 //bool
+    
+    
     MMKVSetBool(YES, @"second");
     BOOL second = MMKVGetBool(@"second");
     NSLog(@"%d",second);
@@ -109,12 +97,11 @@
 //    NSArray *arr = @[@"second",@"doutula1"];
 //    MMKVRemoveKeys(arr);
 
-    MMKVClearAll;
-    MMKVClearMemoryCache;
-
-    
-    size_t count1 = [MMKVDefault count];
-    NSLog(@"包含:%ld个key",count1);
+//    MMKVClearAll;
+//    MMKVClearMemoryCache;
+//
+//    size_t count1 = [MMKVDefault count];
+//    NSLog(@"包含:%ld个key",count1);
     
 }
 #pragma mark - 懒加载
